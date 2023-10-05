@@ -16,7 +16,13 @@ const nextConfig = {
         hostname: 'pokeapi.co',
         port: '',
         pathname: '/**',
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.digi-api.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },  
 }

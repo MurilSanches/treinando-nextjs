@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 
-
 const Home = () => (
   <main className="p-4">
     <div className="bg-blue-500 text-white p-8 rounded shadow-lg mb-4">
