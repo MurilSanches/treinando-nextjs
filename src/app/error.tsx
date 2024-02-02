@@ -1,10 +1,11 @@
-'use client' // Error components must be Client Components
- 
+'use client'
+
+// Error components must be Client Components
 import { useEffect } from 'react'
- 
+
 export default function Error({
   error,
-  reset,
+  reset
 }: {
   error: Error
   reset: () => void
@@ -13,7 +14,7 @@ export default function Error({
     // Log the error to an error reporting service
     console.error(error)
   }, [error])
- 
+
   return (
     <div>
       <h2>Something went wrong!</h2>

@@ -1,20 +1,23 @@
-import Link from "next/link";
-import React from "react";
+import React from 'react'
+
+import Link from 'next/link'
 
 const Home = () => (
   <main className="p-4">
-    <div className="bg-blue-500 text-white p-8 rounded shadow-lg mb-4">
-      <h1 className="text-4xl font-semibold mb-2">Bem-vindo ao Meu Site</h1>
+    <div className="mb-4 rounded bg-blue-500 p-8 text-white shadow-lg">
+      <h1 className="mb-2 text-4xl font-semibold">Bem-vindo ao Meu Site</h1>
       <p className="text-lg">Explore, aprenda e divirta-se.</p>
     </div>
 
-    <h2 className="text-2xl font-semibold mb-4">Últimas Atualizações</h2>
-    <ul className="list-disc list-inside">
+    <h2 className="mb-4 text-2xl font-semibold">Últimas Atualizações</h2>
+    <ul className="list-inside list-disc">
       <li>
         <p className="text-gray-600">Novos tutoriais de React publicados.</p>
       </li>
       <li>
-        <p className="text-gray-600">Dicas de desenvolvimento web em nosso blog.</p>
+        <p className="text-gray-600">
+          Dicas de desenvolvimento web em nosso blog.
+        </p>
       </li>
     </ul>
 
@@ -24,7 +27,6 @@ const Home = () => (
       </Link>
     </div>
   </main>
-);
+)
 
-
-export default Home;
+export default Home

@@ -1,24 +1,22 @@
-import "../styles/globals.css"
-
 import { Metadata } from 'next'
 
+import './globals.css'
+
 interface IRootLayout {
-  children: React.ReactNode,
+  children: React.ReactNode
   params: { lang: string }
 }
 
 export const metadata: Metadata = {
   title: 'TREINANDO NEXTJS',
-  description: 'TREINANDO NEXTJS',
+  description: 'TREINANDO NEXTJS'
 }
 
 const RootLayout = ({ children, params }: IRootLayout) => {
-  const {lang} = params
+  const { lang } = params
   return (
     <html lang={lang}>
-      <body>
-        {children}     
-      </body>
+      <body>{children}</body>
     </html>
   )
 }

@@ -4,19 +4,19 @@ const Projects = () => {
     {
       title: 'Projeto A',
       description: 'Uma descrição breve do Projeto A.',
-      link: 'https://linkdoprojetoA.com',
+      link: 'https://linkdoprojetoA.com'
     },
     {
       title: 'Projeto B',
       description: 'Uma descrição breve do Projeto B.',
-      link: 'https://linkdoprojetoB.com',
-    },
+      link: 'https://linkdoprojetoB.com'
+    }
     // Adicione mais projetos conforme necessário
-  ];
+  ]
 
   return (
     <main className="p-4">
-      <h2 className="text-3xl font-semibold mb-4">Meus Projetos</h2>
+      <h2 className="mb-4 text-3xl font-semibold">Meus Projetos</h2>
       <ul>
         {projects.map((project, index) => (
           <li key={index} className="mb-4">
@@ -24,7 +24,7 @@ const Projects = () => {
             <p className="text-gray-600">{project.description}</p>
             <a
               href={project.link}
-              className="text-blue-500 hover:underline mt-2 inline-block"
+              className="mt-2 inline-block text-blue-500 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -34,7 +34,7 @@ const Projects = () => {
         ))}
       </ul>
     </main>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

@@ -1,4 +1,4 @@
 export type TSidebarContext = {
-    isOpen: boolean;
-    setIsOpen: (open: boolean) => void,
+  isOpen: boolean
+  setIsOpen: (open: boolean) => void
 }

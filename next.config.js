@@ -9,22 +9,22 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'raw.githubusercontent.com',
         port: '',
-        pathname: '/PokeAPI/**',
+        pathname: '/PokeAPI/**'
       },
       {
         protocol: 'https',
         hostname: 'pokeapi.co',
         port: '',
-        pathname: '/**',
+        pathname: '/**'
       },
       {
         protocol: 'https',
         hostname: 'www.digi-api.com',
         port: '',
-        pathname: '/**',
-      },
-    ],
-  },  
+        pathname: '/**'
+      }
+    ]
+  }
 }
 
 module.exports = nextConfig
@@ -38,13 +38,13 @@ module.exports = nextConfig
     // This is the default locale you want to be used when visiting
     // A non-locale prefixed path e.g. `/hello`
     defaultLocale: 'default',
-    
-      When localeDetection is set to false Next.js will no longer 
-      automatically redirect based on the user's preferred locale 
-      and will only provide locale information detected 
-      from either the locale based domain or locale path 
+
+      When localeDetection is set to false Next.js will no longer
+      automatically redirect based on the user's preferred locale
+      and will only provide locale information detected
+      from either the locale based domain or locale path
       as described above.
-    
+
     localeDetection: true,
     // This is a list of locale domains and the default locale they
     // Should handle (these are only required when setting up domain routing)

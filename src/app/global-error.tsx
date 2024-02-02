@@ -1,13 +1,13 @@
 'use client'
- 
+
 export default function GlobalError({
-    error,
-    reset,
+  error,
+  reset
 }: {
-    error: Error
-    reset: () => void
+  error: Error
+  reset: () => void
 }) {
-    console.log(error)
+  console.log(error)
 
   return (
     <html>
