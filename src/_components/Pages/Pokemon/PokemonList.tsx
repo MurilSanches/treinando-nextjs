@@ -57,7 +57,7 @@ const PokemonList = () => {
     }
 
     return(
-        <main className="p-4">
+        <main className="p-4">            
             <div className="flex p-4 justify-between">
                 <span 
                     className="cursor-pointer"
