@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer utilities {
   .paddle-checkout {
     @apply min-h-screen w-full py-10 md:py-20 lg:w-1/2;

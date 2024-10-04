@@ -35,6 +35,24 @@ module.exports = {
           300: '#1F2428',
           400: '#242C38'
         },
+        lightGreen: {
+          100: '#E1F0DA',
+          200: '#D4E7C5',
+          300: '#BFD8AF',
+          400: '#99BC85'
+        },
+        yellow: {
+          DEFAULT: '#FAEF9B',
+          100: '#F6D776'
+        },
+        darkGreen: {
+          DEFAULT: '#12372A',
+          100: '#436850'
+        },
+        waterBlue: {
+          DEFAULT: '#647D87',
+          100: '#6DA4AA'
+        },
         grey: {
           100: '#969BA5',
           200: '#55616D'

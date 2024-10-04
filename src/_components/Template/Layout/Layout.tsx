@@ -10,7 +10,9 @@ interface Layout {
 const Layout = ({ children }: Layout) => (
   <section className="flex min-h-screen w-full flex-col">
     <Header />
-    <div className="min-h-screen">{children}</div>
+    <div className="mx-auto min-h-screen max-w-[70%]">
+      <div className="w-full py-10">{children}</div>
+    </div>
     <Footer />
   </section>
 )

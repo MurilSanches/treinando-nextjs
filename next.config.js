@@ -19,7 +19,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'www.digi-api.com',
+        hostname: 'digi-api.com',
         port: '',
         pathname: '/**'
       }

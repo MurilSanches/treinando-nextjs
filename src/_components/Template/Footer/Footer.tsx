@@ -1,7 +1,5 @@
-import React from 'react'
-
 const Footer = () => (
-  <footer className="bg-blue-500 p-4 text-white">
+  <footer className="border-t border-waterBlue bg-yellow p-4 text-waterBlue drop-shadow-lg">
     <div className="flex">
       <p>
         &copy; {new Date().getFullYear()} Meu Site. Todos os direitos
