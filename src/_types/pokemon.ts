@@ -1,3 +1,12 @@
+export interface PokemonList {
+  results: PokemonListItem[]
+}
+
+export interface PokemonListItem {
+  name: string
+  url: string
+}
+
 export interface Root {
   abilities: Ability[]
   base_experience: number

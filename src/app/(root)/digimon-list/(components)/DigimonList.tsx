@@ -44,7 +44,7 @@ const DigimonList = async ({ id }: { id: string }) => {
 
       {/* Título */}
       <h1 className="text-4xl font-extrabold text-gray-800 mb-12 text-center">
-        Lista de Digimons
+       Digimons
       </h1>
 
       {/* Grid Responsivo de Digimons */}

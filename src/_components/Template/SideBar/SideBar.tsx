@@ -45,7 +45,7 @@ const Sidebar = () => {
           </li>
           <li className="mb-2">
             <Link
-              href="/pokemon"
+              href="/pokemon-list/0"
               className={`block hover:text-white ${pathname.includes('/pokemon/') ? 'font-bold text-blue-500' : 'text-gray-300'}`}
             >
               Pokemon - React-Query (CSR)
@@ -53,7 +53,7 @@ const Sidebar = () => {
           </li>
           <li className="mb-2">
             <Link
-              href="/digimon-list"
+              href="/digimon-list/0"
               className={`block hover:text-white ${pathname.includes('/digimon-list/') ? 'font-bold text-blue-500' : 'text-gray-300'}`}
             >
               Digimon (SSR)

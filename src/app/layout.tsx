@@ -16,7 +16,8 @@ const RootLayout = ({ children, params }: IRootLayout) => {
   const { lang } = params
   return (
     <html lang={lang}>
-      <body>{children}</body>
+      <body>
+      {children}</body>
     </html>
   )
 }

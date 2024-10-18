@@ -22,6 +22,12 @@ const nextConfig = {
         hostname: 'digi-api.com',
         port: '',
         pathname: '/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.api-onepiece.com',
+        port: '',
+        pathname: '/**'
       }
     ]
   }

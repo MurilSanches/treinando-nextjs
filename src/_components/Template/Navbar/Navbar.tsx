@@ -27,8 +27,8 @@ const Navbar = () => {
         </li>
         <li className="mb-2 px-2">
           <Link
-            href="/pokemon"
-            className={`block hover:text-white ${pathname.includes('/pokemon/') ? 'font-bold text-waterBlue' : 'text-waterBlue-100'}`}
+            href="/pokemon-list/0"
+            className={`block hover:text-white ${pathname.includes('/pokemon-list/') ? 'font-bold text-waterBlue' : 'text-waterBlue-100'}`}
           >
             Pokemon
           </Link>
@@ -39,6 +39,14 @@ const Navbar = () => {
             className={`block hover:text-white ${pathname.includes('/digimon-list/') ? 'font-bold text-waterBlue' : 'text-waterBlue-100'}`}
           >
             Digimon
+          </Link>
+        </li>
+        <li className="mb-2 px-2">
+          <Link
+            href="/one-piece"
+            className={`block hover:text-white ${pathname.includes('/one-piece/') ? 'font-bold text-waterBlue' : 'text-waterBlue-100'}`}
+          >
+            One piece
           </Link>
         </li>
         <li className="mb-2 px-2">
