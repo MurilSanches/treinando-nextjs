@@ -1,7 +1,4 @@
-'use client'
-
 import React from 'react'
-
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -13,73 +10,101 @@ interface IPokemonDetailsProps {
 }
 
 const PokemonDetails = ({ data, handleChange }: IPokemonDetailsProps) => (
-  <div className="flex flex-col">
-    <div className="flex justify-between p-4">
-      <Link href="/pokemon">Voltar</Link>
-      <div className="flex justify-between px-10">
-        <Link className="px-2" href={`/pokemon/${handleChange(-1)}`}>
+  <div className="flex flex-col items-center bg-gray-100 min-h-screen p-6">
+    {/* Header */}
+    <div className="flex justify-between w-full max-w-3xl mb-6">
+      <Link href="/pokemon" className="text-blue-500 hover:underline">
+        Voltar
+      </Link>
+      <div className="flex space-x-4">
+        <Link
+          href={`/pokemon/${handleChange(-1)}`}
+          className="text-blue-500 hover:underline"
+        >
           Anterior
         </Link>
-        <Link className="px-2" href={`/pokemon/${handleChange(+1)}`}>
+        <Link
+          href={`/pokemon/${handleChange(+1)}`}
+          className="text-blue-500 hover:underline"
+        >
           Próximo
         </Link>
       </div>
     </div>
 
-    <h1 className="ml-6 mt-20 text-3xl font-bold uppercase">{data.name}</h1>
+    {/* Nome do Pokémon */}
+    <h1 className="text-5xl font-bold uppercase text-center text-gray-800 mb-10 bg-green-200 py-3 px-6 rounded-md shadow-lg">
+      {data.name}
+    </h1>
 
-    <div className="ml-6 mt-10 flex w-3/12 rounded-lg border-2 border-solid border-black p-5">
-      <div>
-        <p className="flex">
-          <span className="font-bold ">Peso:</span>
-          {data.weight}
-        </p>
-        <p className="flex">
-          <span className="font-bold">Altura:</span>
-          {data.height}
-        </p>
-      </div>
+    {/* Peso e Altura */}
+    <div className="flex justify-around text-center bg-white rounded-lg shadow-md p-6 w-full mb-10">
+      <span className="text-lg font-semibold text-gray-600">Peso:</span> {data.weight}
+      <span className="text-lg font-semibold text-gray-600">Altura:</span> {data.height}
     </div>
 
-    <div className="mt-10 flex px-6">
-      <div className="flex flex-col font-bold">
-        Normal:
+    {/* Imagens Normal e Shiny */}
+    <div className="flex justify-around w-full max-w-md mb-10">
+      <div className="flex flex-col items-center border p-4 rounded-lg shadow-md bg-gray-50">
+        <span className="font-bold text-gray-700">Normal</span>
         <Image
           src={data.sprites?.front_default}
           alt={data.name}
           width={100}
-          height={50}
+          height={100}
+          className="mt-2"
         />
       </div>
-      <div className="flex flex-col font-bold">
-        Shiny:
+      <div className="flex flex-col items-center border p-4 rounded-lg shadow-md bg-gray-50">
+        <span className="font-bold text-gray-700">Shiny</span>
         <Image
           src={data.sprites?.front_shiny}
-          alt={data.name}
+          alt={`${data.name} shiny`}
           width={100}
-          height={50}
+          height={100}
+          className="mt-2"
         />
       </div>
     </div>
 
-    <h3 className="p-4 font-bold">Status:</h3>
-    {data.stats?.map((stat) => (
-      <div
-        className="flex justify-between px-6 py-1 text-center"
-        key={`stat${stat.stat.name}`}
-      >
-        <p className="font-bold uppercase">{stat.stat.name}:</p>
-        <p className="text-center">{stat.base_stat}</p>
+    {/* Status */}
+    <div className="w-full max-w-3xl bg-white rounded-lg shadow-md p-6 mb-10">
+      <h3 className="text-2xl font-bold text-gray-800 mb-4">Status:</h3>
+      <div className="grid grid-cols-2 gap-4">
+        {data.stats?.map((stat) => (
+          <div
+            className="flex flex-col bg-gray-50 p-3 rounded-lg shadow-sm"
+            key={`stat${stat.stat.name}`}
+          >
+            <p className="font-bold uppercase text-gray-700">{stat.stat.name}:</p>
+            <div className="w-full bg-gray-200 rounded-full h-4">
+              <div
+                className="bg-blue-500 h-4 rounded-full"
+                style={{ width: `${stat.base_stat}%` }}
+              ></div>
+            </div>
+          </div>
+        ))}
       </div>
-    ))}
+    </div>
 
-    <h3 className="p-4 font-bold">Habilidades:</h3>
-    {data.abilities?.map((ability) => (
-      <div className="px-6 py-1" key={`ability${ability.ability.name}`}>
-        <p className="font-bold uppercase">{ability.ability.name}:</p>
-        <p>{ability.is_hidden ? 'Invisivel' : 'Visivel'}</p>
+    {/* Habilidades */}
+    <div className="w-full max-w-3xl bg-white rounded-lg shadow-md p-6">
+      <h3 className="text-2xl font-bold text-gray-800 mb-4">Habilidades:</h3>
+      <div className="space-y-3">
+        {data.abilities?.map((ability) => (
+          <div
+            className="flex justify-between items-center bg-gray-50 p-3 rounded-lg shadow-sm"
+            key={`ability${ability.ability.name}`}
+          >
+            <p className="font-bold uppercase text-gray-700">{ability.ability.name}:</p>
+            <p className={ability.is_hidden ? 'text-red-500' : 'text-green-500'}>
+              {ability.is_hidden ? 'Invisível' : 'Visível'}
+            </p>
+          </div>
+        ))}
       </div>
-    ))}
+    </div>
   </div>
 )
 
